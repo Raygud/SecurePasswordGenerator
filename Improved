@@ -1,0 +1,96 @@
+using System;
+using System.IO;
+
+
+namespace PasswordGenerator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ConsoleKeyInfo afslut;
+            do
+            {
+                Console.Clear(); Console.Write("your new password is: ");
+    
+
+                string[] lines = new string[433];
+                StreamReader a_reader = new StreamReader("D:/AnimalsList.txt");
+
+                for (int idx = 0; idx < 433; idx++)
+
+                    lines[idx] = a_reader.ReadLine();
+
+
+
+
+                a_reader.Close();
+
+                string[] line = new string[433];
+                StreamReader n_reader = new StreamReader("D:/VerbList.txt");
+
+                for (int id = 0; id < 433; id++)
+
+                    line[id] = n_reader.ReadLine();
+
+
+
+
+                n_reader.Close();
+
+                string[] lin = new string[18];
+                StreamReader s_reader = new StreamReader("D:/Symbols.txt");
+
+                for (int ia = 0; ia < 18; ia++)
+                {
+                    lin[ia] = s_reader.ReadLine();
+                }
+
+
+
+                s_reader.Close();
+
+
+
+                Random rand = new Random();
+                int i = rand.Next(433);
+                int a = rand.Next(433);
+                int v = rand.Next(165);
+                int n = rand.Next(99);
+                int s = rand.Next(17);
+                Console.Write(n);
+                Console.Write(lines[i]);
+                Console.Write("s");
+                Console.Write(line[v]);
+                Console.Write("A");
+                Console.Write(lines[a]);
+                Console.Write(lin[s]);
+
+                Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                Console.WriteLine("            ██████████                                                  ");
+                Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░████████████████████████████████    ");
+                Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
+                Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░██░░░░░░░░██    ");
+                Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░██████░░██  ██░░░░██  ████████      ");
+                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░██    ██      ████                  ");
+                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                Console.WriteLine("            ██████████                                                  ");
+                Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                Console.WriteLine("Tast ESC for at afslutte, eller andet for at oprette en ny adgangskode...");
+
+
+                afslut = Console.ReadKey();
+            } while (afslut.Key != ConsoleKey.Escape) ;
+
+        }
+    }
+}
