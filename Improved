@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 
+
 namespace PasswordGenerator
 {
     class Program
@@ -8,9 +9,23 @@ namespace PasswordGenerator
         static void Main(string[] args)
         {
             ConsoleKeyInfo afslut;
+            ConsoleKeyInfo stop;
             do
             {
-                Console.Clear(); Console.Write("your new password is: ");
+
+                Console.Clear();
+                
+
+                Console.WriteLine("Which of the following are you most interested in?");
+                Console.WriteLine("1: Animals");
+                Console.WriteLine("2: Cars");
+                Console.WriteLine("3: Countires");
+                Console.WriteLine("4: Pokemon");
+
+                string choice = Console.ReadLine();
+
+
+
     
 
                 string[] lines = new string[433];
@@ -19,7 +34,6 @@ namespace PasswordGenerator
                 for (int idx = 0; idx < 433; idx++)
 
                     lines[idx] = a_reader.ReadLine();
-
 
 
 
@@ -34,7 +48,6 @@ namespace PasswordGenerator
 
 
 
-
                 n_reader.Close();
 
                 string[] lin = new string[18];
@@ -46,45 +59,228 @@ namespace PasswordGenerator
                 }
 
 
-
                 s_reader.Close();
 
+                string[] pines = new string[720];
+                StreamReader p_reader = new StreamReader("D:/PokemonList.txt");
+
+                for (int ip = 0; ip < 720; ip++)
+
+                    pines[ip] = p_reader.ReadLine();
 
 
-                Random rand = new Random();
-                int i = rand.Next(433);
-                int a = rand.Next(433);
-                int v = rand.Next(165);
-                int n = rand.Next(99);
-                int s = rand.Next(17);
-                Console.Write(n);
-                Console.Write(lines[i]);
-                Console.Write("s");
-                Console.Write(line[v]);
-                Console.Write("A");
-                Console.Write(lines[a]);
-                Console.Write(lin[s]);
+                p_reader.Close();
 
-                Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
-                Console.WriteLine("            ██████████                                                  ");
-                Console.WriteLine("        ████░░░░░░░░░░████                                              ");
-                Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
-                Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
-                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
-                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░████████████████████████████████    ");
-                Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
-                Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
-                Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
-                Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░██░░░░░░░░██    ");
-                Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░██████░░██  ██░░░░██  ████████      ");
-                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░██    ██      ████                  ");
-                Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
-                Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
-                Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
-                Console.WriteLine("        ████░░░░░░░░░░████                                              ");
-                Console.WriteLine("            ██████████                                                  ");
-                Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
-                Console.WriteLine("Tast ESC for at afslutte, eller andet for at oprette en ny adgangskode...");
+                string[] coines = new string[195];
+                StreamReader co_reader = new StreamReader("D:/CountriesList.txt");
+
+                for (int ico = 0; ico < 195; ico++)
+
+                    coines[ico] = co_reader.ReadLine();
+
+
+                co_reader.Close();
+
+                string[] cines = new string[41];
+                StreamReader c_reader = new StreamReader("D:/CarsList.txt");
+
+                for (int ic = 0; ic < 41; ic++)
+
+                    cines[ic] = c_reader.ReadLine();
+
+
+                c_reader.Close();
+
+                if (choice == ("1"))
+
+                    do
+                    {
+                    Console.Clear();
+                    Console.Write("your new password is: ");
+                    Random rand = new Random();
+                    int p = rand.Next(721);
+                    int C = rand.Next(41);
+                    int Co = rand.Next(195);
+                    int i = rand.Next(433);
+                    int a = rand.Next(433);
+                    int v = rand.Next(165);
+                    int n = rand.Next(99);
+                    int s = rand.Next(17);
+                    Console.Write(n);
+                    Console.Write(lines[i]);
+                    Console.Write("s");
+                    Console.Write(line[v]);
+                    Console.Write("A");
+                    Console.Write(lines[a]);
+                    Console.WriteLine("");
+
+
+
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░████████████████████████████████    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░██░░░░░░░░██    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░██████░░██  ██░░░░██  ████████      ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░██    ██      ████                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("Tast ESC for at afslutte, eller andet for at oprette en ny adgangskode...");
+                    Console.WriteLine("Tast Space for at skifte kategori...");
+                        stop = Console.ReadKey();
+                    } while (stop.Key != ConsoleKey.Spacebar);
+
+                if (choice == ("2"))
+
+                do{
+                    Console.Clear();
+                    Console.Write("your new password is: ");
+                    Random rand = new Random();
+                    int p = rand.Next(721);
+                    int C = rand.Next(41);
+                    int C2 = rand.Next(41);
+                    int Co = rand.Next(195);
+                    int i = rand.Next(433);
+                    int a = rand.Next(433);
+                    int v = rand.Next(165);
+                    int n = rand.Next(99);
+                    int s = rand.Next(17);
+                    Console.Write(n);
+                    Console.Write(cines[C]);
+                    Console.Write("s");
+                    Console.Write(line[v]);
+                    Console.Write("A");
+                    Console.Write(cines[C2]);
+                    Console.WriteLine("");
+
+
+
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░████████████████████████████████    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░██░░░░░░░░██    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░██████░░██  ██░░░░██  ████████      ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░██    ██      ████                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("Tast ESC for at afslutte, eller andet for at oprette en ny adgangskode...");
+                    Console.WriteLine("Tast Space for at skifte kategori...");
+                    stop = Console.ReadKey();
+                } while (stop.Key != ConsoleKey.Spacebar) ;
+
+                if (choice == ("3"))
+
+                do{
+                    Console.Clear();
+                    Console.Write("your new password is: ");
+                    Random rand = new Random();
+                    int p = rand.Next(721);
+                    int co = rand.Next(195);
+                    int co2 = rand.Next(195);
+                    int v = rand.Next(165);
+                    int n = rand.Next(99);
+                    int s = rand.Next(17);
+                    Console.Write("In");
+                    Console.Write("In19");
+                    Console.Write(n);
+                    Console.Write(coines[co]);
+                    Console.Write(line[v]);
+                    Console.Write("ed");
+                    Console.Write(coines[co2]);
+                    Console.WriteLine("");
+
+
+
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░████████████████████████████████    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░██░░░░░░░░██    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░██████░░██  ██░░░░██  ████████      ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░██    ██      ████                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("Tast ESC for at afslutte, eller andet for at oprette en ny adgangskode...");
+                    Console.WriteLine("Tast Space for at skifte kategori...");
+                    stop = Console.ReadKey();
+                } while (stop.Key != ConsoleKey.Spacebar) ;
+
+                if (choice == ("4"))
+
+                do{
+                    Console.Clear();
+                    Console.Write("your new password is: ");
+                    Random rand = new Random();
+                    int p = rand.Next(721);
+                    int p2= rand.Next(721);
+                    int v = rand.Next(165);
+                    int n = rand.Next(99);
+                    int s = rand.Next(17);
+                    Console.Write(n);
+                    Console.Write(pines[p]);
+                    Console.Write("s");
+                    Console.Write(line[v]);
+                    Console.Write("A");
+                    Console.Write(pines[p2]);
+                    Console.Write(pines[p]);
+                    Console.WriteLine("");
+
+
+
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░████████████████████████████████    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██  ");
+                    Console.WriteLine("██░░░░██      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░██░░░░░░░░██    ");
+                    Console.WriteLine("██░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░██████░░██  ██░░░░██  ████████      ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░██    ██      ████                  ");
+                    Console.WriteLine("  ██░░░░░░░░░░░░░░░░░░░░░░░░██  ██░░██                                  ");
+                    Console.WriteLine("    ██░░░░░░░░░░░░░░░░░░░░░░██    ████                                  ");
+                    Console.WriteLine("      ██░░░░░░░░░░░░░░░░░░██                                            ");
+                    Console.WriteLine("        ████░░░░░░░░░░████                                              ");
+                    Console.WriteLine("            ██████████                                                  ");
+                    Console.WriteLine("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("Tast ESC for at afslutte, eller andet for at oprette en ny adgangskode...");
+                    Console.WriteLine("Tast Space for at skifte kategori...");
+                    stop = Console.ReadKey();
+                } while (stop.Key != ConsoleKey.Spacebar) ;
 
 
                 afslut = Console.ReadKey();
